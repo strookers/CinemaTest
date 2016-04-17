@@ -60,6 +60,34 @@ namespace CinemaTest.Migrations
                     MovieId = new Guid("FCDE3A07-6FC9-48CA-AB88-713AEA94E322"),
                     ScreenId = new Guid("689C15E4-F631-468E-84E0-3D46CD49482B"),
                     DateTime = DateTime.ParseExact("2016-12-06 15:00:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+                },
+            new Show
+            {
+                Id = new Guid("5548570c-9bee-4a7b-91e1-d2379aaafa48"),
+                MovieId = new Guid("FCDE3A07-6FC9-48CA-AB88-713AEA94E322"),
+                ScreenId = new Guid("689C15E4-F631-468E-84E0-3D46CD49482B"),
+                DateTime = DateTime.ParseExact("2016-12-07 14:00:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+            },
+            new Show
+            {
+                Id = new Guid("ba501a8c-c578-4bac-9c62-f5b33af4e9e7"),
+                MovieId = new Guid("FCDE3A07-6FC9-48CA-AB88-713AEA94E322"),
+                ScreenId = new Guid("689C15E4-F631-468E-84E0-3D46CD49482B"),
+                DateTime = DateTime.ParseExact("2016-12-07 16:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+            },
+            new Show
+            {
+                Id = new Guid("df1e5544-a9b0-4f77-8379-51b0f05dd823"),
+                MovieId = new Guid("44E11B12-C9B7-44B2-8EF5-41C67FBE70EC"),
+                ScreenId = new Guid("2b1e1e69-9f0a-41d3-9d63-d04cf97614dc"),
+                DateTime = DateTime.ParseExact("2016-12-07 16:00:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+            },
+                new Show
+                {
+                    Id = new Guid("220eff8f-952d-412f-9a5a-ebb40c6fc60e"),
+                    MovieId = new Guid("44E11B12-C9B7-44B2-8EF5-41C67FBE70EC"),
+                    ScreenId = new Guid("2b1e1e69-9f0a-41d3-9d63-d04cf97614dc"),
+                    DateTime = DateTime.ParseExact("2016-12-07 18:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
                 });
         }
     }

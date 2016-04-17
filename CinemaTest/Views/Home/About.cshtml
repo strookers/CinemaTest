@@ -27,7 +27,10 @@
             <ul class="list-group">
                 @foreach(var show in mov.Shows)
                 {
-                <a href="#"> <li class="list-group-item">@show.DateTime.ToString("HH:mm")</li> </a>
+                    if(show.DateTime.ToString("yyyy-MM-dd") ==(string) ViewData["dt"])
+                    {
+                        <a href="#"> <li class="list-group-item">@show.DateTime.ToString("HH:mm")</li> </a>
+                    }
                 }
             </ul>
         </div>

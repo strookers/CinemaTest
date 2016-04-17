@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+@using TMDbLib.Objects.Movies
+@model TMDbLib.Objects.Movies.Movie
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+    @Model.Title<br />
+    @Model.ReleaseDate.ToString()<br />
+    <img src="https://image.tmdb.org/t/p/w185/@Model.PosterPath"/>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>

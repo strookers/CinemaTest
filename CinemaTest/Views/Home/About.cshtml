@@ -1,0 +1,59 @@
+﻿@using System.Globalization
+@using CinemaTest.Models
+@model IEnumerable<CinemaTest.Models.Movie>
+@{
+    ViewBag.Title = "About";
+}
+
+<div class="page-header">
+    <h1>
+        Onsdags Program <small>@ViewData["dt"]</small>
+    </h1>
+</div>
+<ol class="breadcrumb">
+    <li><a href="#">Forside</a></li>
+    <li><a href="#">Program</a></li>
+</ol>
+
+<div class="row">
+    @foreach(var mov in Model)
+    { 
+    <div class="col-md-4">
+        <h2>@mov.Name</h2>
+        <div class="col-md-6">
+            <img src="~/Content/img/dummy.jpg" class="img-thumbnail"/>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group">
+                @foreach(var show in mov.Shows)
+                {
+                <a href="#"> <li class="list-group-item">@show.DateTime.ToString("HH:mm")</li> </a>
+                }
+            </ul>
+        </div>
+    </div>
+    }
+</div>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <ul class="pagination">
+            <li>
+                <a href="@Url.Action("About", "Home", new {dt = DateTime.ParseExact($"{ViewData["dt"]} 15:00:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture).AddDays(-1) }, null)" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="@Url.Action("About", "Home", new {dt = DateTime.ParseExact($"{ViewData["dt"]} 15:00:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture).AddDays(1) }, null)" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
